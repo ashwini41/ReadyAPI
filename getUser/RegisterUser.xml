@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="RegisterUser" path="/api/register" id="ee0e5217-9800-49f0-ae40-7a3ed36a0b51" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ee0e5217-9800-49f0-ae40-7a3ed36a0b51fileName">RegisterUser</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="8212e235-d278-4eab-b50f-2374adade966" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="77173426-05ef-4cfd-8d93-ed0369c92f91" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

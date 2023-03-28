@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Resource" path="/api/unknown" id="a794a439-4fe9-4ffa-9ca4-099e2e32e943" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a794a439-4fe9-4ffa-9ca4-099e2e32e943fileName">Resource</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="7b157b3a-0211-4820-92a0-ed32d02fbd98" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="b3579ed5-fea7-40e3-a400-a6976b036e13" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://reqres.in/api/unknown</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

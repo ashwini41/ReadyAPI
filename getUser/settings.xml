@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="c4561720-da93-4086-886d-74fac801816a" name="getUser" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c4561720-da93-4086-886d-74fac801816afileName">getUser</con:setting>
+  </con:settings>
+  <con:endpoints>
+    <con:endpoint>https://reqres.in/</con:endpoint>
+  </con:endpoints>
+</con:interface>

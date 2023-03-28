@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5ba8fd36-d5a3-459a-8d9d-fc079742eb77" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="loginUsers Test Case" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [loginUsers] located at [/api/login]</con:description>
+  <con:settings>
+    <con:setting id="5ba8fd36-d5a3-459a-8d9d-fc079742eb77fileName">loginUsers-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="9735f9c1-4f91-4eda-8241-080e2e4ff278">
+    <con:settings/>
+    <con:config service="getUser" resourcePath="/api/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="5b27f028-9bdf-47a2-98d7-09b2edf9af11" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in/</con:endpoint>
+        <con:request>{
+    "email": "${#[JSON_functionalTest#getUser Test Case#Data Source]#email}",
+    "password": "cityslicka"
+}</con:request>
+        <con:originalUri>https://reqres.in/loginUsers</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

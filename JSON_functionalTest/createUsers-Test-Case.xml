@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="108c174b-590b-4ef2-82f9-eb74237ad91c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="createUsers Test Case" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [createUsers] located at [/api/users]</con:description>
+  <con:settings>
+    <con:setting id="108c174b-590b-4ef2-82f9-eb74237ad91cfileName">createUsers-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="createUser" id="8f77b279-670d-4827-9fce-aa1cd507091f">
+    <con:settings/>
+    <con:config service="getUser" resourcePath="/api/users" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="createUser" id="8989d706-2ca1-4c12-a0a6-b28e989306fd" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "${#[JSON_functionalTest#getUser Test Case#Data Source]#name}",
+    "job": "leader"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

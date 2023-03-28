@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="6df55a0d-a042-47ee-8b44-7292b9391b6c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="RegisterUser Test Case" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [RegisterUser] located at [/api/register]</con:description>
+  <con:settings>
+    <con:setting id="6df55a0d-a042-47ee-8b44-7292b9391b6cfileName">RegisterUser-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="8e9b34fe-3f68-4c44-a466-516c755628a1">
+    <con:settings/>
+    <con:config service="getUser" resourcePath="/api/register" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="77173426-05ef-4cfd-8d93-ed0369c92f91" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in/</con:endpoint>
+        <con:request>{
+    "email": "${#[JSON_functionalTest#getUser Test Case#Data Source]#email}",
+    "password": "pistol"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/register</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="4b1d9f46-9c2d-4188-9e89-9d5dd6ae9420">
+    <con:settings/>
+    <con:config>
+      <script>import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
+def content = """
+{
+   "app":{ },
+   "at":2,
+   "badv":[ ],
+   "bcat":[ ],
+   "device":{
+      "carrier":"310-410",
+      "connectiontype":3,
+      "devicetype":1,
+      "dnt":0,
+      "dpidmd5":"268d403db34e32c45869bb1401247af9",
+      "dpidsha1":"1234" 
+   }
+}"""
+
+def slurped = new JsonSlurper().parseText(content)
+def builder = new JsonBuilder(slurped)
+builder.content.device.dpidsha1 = 'abcd'  
+//def pretty = builder.prettyPrint(content)
+log.info builder.toPrettyString()</script>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

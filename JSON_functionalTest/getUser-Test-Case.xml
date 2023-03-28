@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c9943473-5623-4a87-b1e4-ad3f8e21f35b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="getUser Test Case" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [getUser] located at [/api/users/]</con:description>
+  <con:settings>
+    <con:setting id="c9943473-5623-4a87-b1e4-ad3f8e21f35bfileName">getUser-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="getUser" id="0f99baeb-0573-4e11-9e1a-bf0a77706e97">
+    <con:settings/>
+    <con:config service="getUser" resourcePath="/api/users/" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="getUser" id="5af0c010-f3e9-4df0-8cd3-be7d80902f30" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="Data Source" id="7815a301-6e98-495d-85a9-c446e04c9411">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JSON">
+        <con:configuration>
+          <sourceStep>getUser</sourceStep>
+          <sourceProperty>Response</sourceProperty>
+          <rowPath>$['data']</rowPath>
+          <columnPath>id</columnPath>
+          <columnPath>['first_name']</columnPath>
+          <columnPath>['email']</columnPath>
+          <columnPath>avatar</columnPath>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>id</con:property>
+      <con:property>name</con:property>
+      <con:property>email</con:property>
+      <con:property>avatar</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

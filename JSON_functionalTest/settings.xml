@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="e4f5f8da-192c-4e55-8445-99bb3db3508a" name="JSON_functionalTest" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test suite generated for the REST service [getUser]</con:description>
+  <con:settings>
+    <con:setting id="e4f5f8da-192c-4e55-8445-99bb3db3508afileName">JSON_functionalTest</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

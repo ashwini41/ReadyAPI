@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="loginUsers" path="/api/login" id="9a3e6af7-70d2-4d57-8775-fe95ffc85649" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9a3e6af7-70d2-4d57-8775-fe95ffc85649fileName">loginUsers</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Method 1" id="48590d67-3130-4936-b587-95df82f2669d" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="5b27f028-9bdf-47a2-98d7-09b2edf9af11" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+      <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}</con:request>
+      <con:originalUri>https://reqres.in/loginUsers</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

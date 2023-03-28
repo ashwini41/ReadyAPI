@@ -1,0 +1,10 @@
+getUser\getUser.xml
+getUser\createUsers.xml
+getUser\loginUsers.xml
+getUser\RegisterUser.xml
+getUser\Resource.xml
+JSON_functionalTest\getUser-Test-Case.xml
+JSON_functionalTest\createUsers-Test-Case.xml
+JSON_functionalTest\RegisterUser-Test-Case.xml
+JSON_functionalTest\loginUsers-Test-Case.xml
+JSON_functionalTest\Resource-Test-Case.xml
