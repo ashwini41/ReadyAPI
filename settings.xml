@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="95c368aa-0162-4126-9b32-80e718d62d9d" created="3.42.0" activeEnvironment="Default environment" name="JIRAAPI" projectVersion="e798dc38-ede0-4a25-be8e-9ebc98116a6a" resourceRoot="" updated="3.41.1" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="95c368aa-0162-4126-9b32-80e718d62d9d" created="3.42.0" activeEnvironment="Default environment" name="JIRAAPI" projectVersion="e798dc38-ede0-4a25-be8e-9ebc98116a6a" resourceRoot="" updated="3.40.2" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Settings File Password" value=""/>
@@ -45,6 +45,7 @@ attachment=&quot;Project Report.pdf&quot;"/>
     <con:setting id="ErrorDetails">true</con:setting>
     <con:setting id="IncludeCoverage">true</con:setting>
     <con:setting id="ProjectSettings@shadowPassword">rajesh</con:setting>
+    <con:setting id="95c368aa-0162-4126-9b32-80e718d62d9dfileName">nonjci6 (1)</con:setting>
   </con:settings>
   <con:requirements/>
   <con:properties>
@@ -58,7 +59,6 @@ attachment=&quot;Project Report.pdf&quot;"/>
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:beforeRunScript/>
   <con:afterRunScript>def testSuiteResults = context.getTestRunner().getResults()
 def testCaseResults
