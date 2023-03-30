@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="95c368aa-0162-4126-9b32-80e718d62d9d" created="3.42.0" activeEnvironment="Default environment" name="JIRAAPI" projectVersion="d77d3dcd-9f8d-4440-a1c5-56a4403b8fa1" resourceRoot="" updated="3.40.2 2022-07-27T09:18:31Z" encryptionMode="Selected properties" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Settings File Password" value=""/>
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="JIRAAPI"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value="reportPath=$(workspaces.output.path)/&quot;Project Report&quot;.pdf 
+attachment=&quot;Project Report.pdf&quot;
+assigneeemail=akshay.mandke-ext@jci.com"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="getEmailbyID"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value="jciproject"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="TestRunner Path" value="/Applications/ReadyAPI-3.40.2.app/Contents/Resources/app/bin"/>
+  <con:entry key="Environment" value="No Environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerUIAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Settings File Password" value=""/>
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="&lt;all>"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value="Authorization"/>
+  <con:entry key="Test Case" value="&lt;all>"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="TestRunner Path" value="/Applications/ReadyAPI-3.40.2.app/Contents/Resources/app/bin"/>
+  <con:entry key="Environment" value="No Environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+    <con:setting id="ProjectSettings@shadowPassword">jira</con:setting>
+  </con:settings>
+  <con:interface xsi:type="con:RestService" id="207a0e1e-ec51-4fba-a41e-baec33847a92" wadlVersion="http://wadl.dev.java.net/2009/02" name="jcijira" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:endpoints>
+      <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Search" path="/rest/api/2/user/search" id="2c65fa93-b42d-4abc-bf65-3430471f0078">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Search" id="53ba4356-4abd-45f8-92fc-7ab199239adc" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>query</con:name>
+            <con:value>ashwinilohar41@gmail.com</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>ashwinilohar41@gmail.com</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>Authorization</con:name>
+            <con:value>Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc=</con:value>
+            <con:style>HEADER</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GetIDbyEmail" id="fe9fc542-543d-43fc-ba00-47762088e281" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/user/search</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="query" value="${assigneeemail}"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>query</con:entry>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Issue" path="/rest/api/2/issue" id="643b8789-f194-4cc7-aa76-30f2e32f2b7b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Issue" id="aba0edbd-6865-41c2-a8be-eac27ce9fe6d" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>Authorization</con:name>
+            <con:value>Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc=</con:value>
+            <con:style>HEADER</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>401 400</con:status>
+          <con:params/>
+          <con:element xmlns:iss="https://team-16705711447180.atlassian.net/rest/api/2/issue">iss:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:iss="https://team-16705711447180.atlassian.net/rest/api/2/issue">iss:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="assignIssue" id="fd3471f8-41b6-4322-b121-c9a60e1b567a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+          <con:request>{
+  "fields": {
+    "project": {
+      "id": "10011"
+    },
+    "assignee": {
+    	 "id" : "5d1840a4dea8360d16bceb80"
+     
+    },
+    "summary": "Rest API New Issue",
+    "description": "This is a new TASK created using Rest API",
+    "issuetype": {
+      "name": "Task"
+    }
+  }
+}</con:request>
+          <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/issue</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Attachments" path="/rest/api/3/issue/${#[JIRAAPI#assignIssue#CommonProperty]#issueID}/attachments" id="0479ac92-10cd-4a34-8c51-7531269d69fb">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Attachments" id="469669c7-7ddb-4b30-80e9-a41f8d1ddba1" method="POST">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>Authorization</con:name>
+            <con:value>Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc=</con:value>
+            <con:style>HEADER</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>X-Atlassian-Token</con:name>
+            <con:value>no-check</con:value>
+            <con:style>HEADER</con:style>
+            <con:default/>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>file</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html;charset=UTF-8</con:mediaType>
+          <con:status>415 405</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/form-data</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>multipart/mixed</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>text/xml</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/plain</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="addAttachment" id="368b1c73-0c28-4886-833d-84d4be6bdc57" mediaType="multipart/form-data" postQueryString="true">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            <con:setting id="RecordRequestRepresentations">true</con:setting>
+          </con:settings>
+          <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/3/issue/SP-212/attachments</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:attachment>
+            <con:name>samplePDF.pdf</con:name>
+            <con:contentType>application/pdf</con:contentType>
+            <con:contentId>samplePDF.pdf</con:contentId>
+            <con:url>/Users/ashwini.lohar/Desktop/samplePDF.pdf</con:url>
+            <con:id>1e64033b-6850-413e-9915-61ee6bf05b7d</con:id>
+          </con:attachment>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="file" value="file:${attachment}"/>
+            <con:entry key="X-Atlassian-Token" value="no-check"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+            <con:entry>X-Atlassian-Token</con:entry>
+            <con:entry>file</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="ef38eb04-66bd-401d-8590-d43c307b5122" name="JIRAAPI">
+    <con:description>The test suite generated for the REST service [https://team-16705711447180.atlassian.net]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="447d5cf8-db21-4fac-a4c3-dfc66b5c9428" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="getEmailbyID" timeout="0">
+      <con:description>The test case generated for the REST resource [Search] located at [/rest/api/2/user/search]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="GetIDbyEmail" id="c7d2d878-364a-4a0e-b7e2-66854a7c2096">
+        <con:settings/>
+        <con:config service="jcijira" resourcePath="/rest/api/2/user/search" methodName="Search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GetIDbyEmail" id="fe9fc542-543d-43fc-ba00-47762088e281" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/user/search</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="4e65c118-dd90-4355-814e-3c4996d05be2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="e130e6f6-21e9-4bc4-82d0-b03da1c080e1" name="Smart Assertion">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Data</con:mode>
+                <con:elements>
+                  <con:path>$[0]['self']</con:path>
+                  <con:element>self</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://jciproducts.atlassian.net/rest/api/2/user?accountId=6294bd061648f20069611ad7</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['accountId']</con:path>
+                  <con:element>accountId</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>6294bd061648f20069611ad7</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['accountType']</con:path>
+                  <con:element>accountType</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>atlassian</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['emailAddress']</con:path>
+                  <con:element>emailAddress</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>akshay.mandke-ext@jci.com</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['avatarUrls']['48x48']</con:path>
+                  <con:element>48x48</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['avatarUrls']['24x24']</con:path>
+                  <con:element>24x24</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['avatarUrls']['16x16']</con:path>
+                  <con:element>16x16</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['avatarUrls']['32x32']</con:path>
+                  <con:element>32x32</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['displayName']</con:path>
+                  <con:element>displayName</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Akshay Mandke</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['active']</con:path>
+                  <con:element>active</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>true</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>3</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['timeZone']</con:path>
+                  <con:element>timeZone</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>America/Chicago</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$[0]['locale']</con:path>
+                  <con:element>locale</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>en_GB</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>[{"self":"https://jciproducts.atlassian.net/rest/api/2/user?accountId=6294bd061648f20069611ad7","accountId":"6294bd061648f20069611ad7","accountType":"atlassian","emailAddress":"akshay.mandke-ext@jci.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png","24x24":"https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png","16x16":"https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png","32x32":"https://secure.gravatar.com/avatar/56de27009edcff77bcc718aeb8ea4bd2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FAM-2.png"},"displayName":"Akshay Mandke","active":true,"timeZone":"America/Chicago","locale":"en_GB"}]</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="Authorization" value="${#Project#Authorization}"/>
+              <con:entry key="query" value="${assigneeemail}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>query</con:entry>
+              <con:entry>Authorization</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="a50c3314-5858-4cc8-82e4-38a3130230ca">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" transferToAll="false" ignoreEmpty="false" transferChildNodes="false">
+            <con:name>accountId</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>GetIDbyEmail</con:sourceStep>
+            <con:sourcePath>$[0]['accountId']</con:sourcePath>
+            <con:targetType>accountID</con:targetType>
+            <con:targetStep>Common property</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="Common property" id="b6e2a3bb-3da6-429c-a423-f15f5515484b">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>accountID</con:name>
+              <con:value>6294bd061648f20069611ad7</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4bd91735-dca9-4c19-9ee1-3344e926b6d6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="assignIssue" timeout="0">
+      <con:description>The test case generated for the REST resource [Issue] located at [/rest/api/2/issue]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="assignIssue" id="b98b9374-c83d-4406-b508-b574521bc467">
+        <con:settings/>
+        <con:config service="jcijira" resourcePath="/rest/api/2/issue" methodName="Issue" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="assignIssue" id="fd3471f8-41b6-4322-b121-c9a60e1b567a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+            <con:request>{
+   "fields" : {
+      "project" : {
+         "id" : "10011"
+      },
+      "assignee" : {
+         "id" : "${#[JIRAAPI#getEmailbyID#Common property]#accountID}"
+      },
+      "summary" : "Rest API New Issue",
+      "description" : "This is a new TASK created using Rest API",
+      "issuetype" : {
+         "name" : "Bug"
+      }
+   }
+}</con:request>
+            <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/issue</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="76a78b1d-7b3f-4006-b55d-0b334810cae0" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="0719a3da-34fe-4fb1-839e-8e60bcf8b95c" name="Smart Assertion">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Data</con:mode>
+                <con:elements>
+                  <con:path>$['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>500789</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['key']</con:path>
+                  <con:element>key</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>SR-5673</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['self']</con:path>
+                  <con:element>self</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://jciproducts.atlassian.net/rest/api/2/issue/500789</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"id":"500789","key":"SR-5673","self":"https://jciproducts.atlassian.net/rest/api/2/issue/500789"}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="Authorization" value="${#Project#Authorization}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Authorization</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="acfcbf46-6328-4153-894e-c675de655398">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>key</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>assignIssue</con:sourceStep>
+            <con:sourcePath>$['key']</con:sourcePath>
+            <con:targetType>issueID</con:targetType>
+            <con:targetStep>CommonProperty</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Groovy Script" id="3931d6a8-e144-42a4-9310-88e68fbaba25">
+        <con:settings/>
+        <con:config>
+          <script/>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="issueID" id="264193b0-942a-4592-aaca-7a6a1e7e8e55">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties/>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="properties" name="CommonProperty" id="a300219e-0ad0-45f7-bd17-a9454d4b5acd">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>issueID</con:name>
+              <con:value>SR-5701</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="fd0ea346-bf06-43af-969d-0eb2fbcf65f2" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="Attachments Test Case" timeout="0" disabled="true">
+      <con:description>The test case generated for the REST resource [Attachments] located at [/rest/api/3/issue/SP-30/attachments]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="addAttachment" id="48da15b6-c60c-4ddc-84f4-e08ef0ff90ac">
+        <con:settings/>
+        <con:config service="jcijira" resourcePath="/rest/api/3/issue/${#[JIRAAPI#assignIssue#CommonProperty]#issueID}/attachments" methodName="Attachments" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="addAttachment" id="368b1c73-0c28-4886-833d-84d4be6bdc57" mediaType="multipart/form-data" postQueryString="true">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jciproducts.atlassian.net</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/3/issue/SP-30/attachments</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b2fd66d2-3a42-4f0a-935c-c5167e3f8dc4" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:attachment>
+              <con:name>readyapi_project_report.pdf</con:name>
+              <con:contentType>application/pdf</con:contentType>
+              <con:contentId>readyapi_project_report.pdf</con:contentId>
+              <con:url>${reportPath}</con:url>
+              <con:id>18d22b08-c9ea-4c13-bb0a-e5c9c70d989c</con:id>
+            </con:attachment>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="Authorization" value="${#Project#Authorization}"/>
+              <con:entry key="file" value="file:${attachment}"/>
+              <con:entry key="X-Atlassian-Token" value="no-check"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Authorization</con:entry>
+              <con:entry>X-Atlassian-Token</con:entry>
+              <con:entry>file</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties>
+    <con:property encrypted="true" userSpecific="true">
+      <con:name>Authorization</con:name>
+      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:encryptedContent>RFB0Vi9qWjlpUEg0enpQTEwrWGdTYzVTaGNrN1NjZVZuZnAvUEpnSTl4bTJaNThhbis2dWVob09GUzlWWjd1L0QrU0xuMGVBaFE0Qw0KV0hFSGl5MHE5dz09DQo=</con:encryptedContent>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
