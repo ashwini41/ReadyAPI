@@ -1,0 +1,9 @@
+https%3A%2F%2Fteam-16705711447180.atlassian.net\Search.xml
+https%3A%2F%2Fteam-16705711447180.atlassian.net\Issue.xml
+https%3A%2F%2Fteam-16705711447180.atlassian.net\Attachments.xml
+JIRAAPI\getEmailbyID.xml
+JIRAAPI\assignIssue.xml
+JIRAAPI\Attachments-Test-Case.xml
+Sample-Virtual-Service\%2Frest%2Fapi%2F2%2Fuser%2Fsearch.xml
+Sample-Virtual-Service\%2Frest%2Fapi%2F2%2Fissue.xml
+Sample-Virtual-Service\%2Frest%2Fapi%2F3%2Fissue%2FSP-339%2Fattachments.xml

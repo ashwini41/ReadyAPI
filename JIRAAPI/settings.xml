@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="ef38eb04-66bd-401d-8590-d43c307b5122" name="JIRAAPI" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>HELLO TEST SUITE</con:description>
+  <con:settings>
+    <con:setting id="ef38eb04-66bd-401d-8590-d43c307b5122fileName">JIRAAPI</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:tearDownScript/>
+  <con:reportScript/>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="207a0e1e-ec51-4fba-a41e-baec33847a92" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://team-16705711447180.atlassian.net" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="207a0e1e-ec51-4fba-a41e-baec33847a92fileName">https%3A%2F%2Fteam-16705711447180.atlassian.net</con:setting>
+  </con:settings>
+  <con:endpoints>
+    <con:endpoint>http://localhost:8088/</con:endpoint>
+    <con:endpoint>http://localhost:8089/</con:endpoint>
+    <con:endpoint>https://team-16705711447180.atlassian.net</con:endpoint>
+  </con:endpoints>
+</con:interface>

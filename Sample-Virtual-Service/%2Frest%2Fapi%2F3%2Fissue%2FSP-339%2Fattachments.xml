@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/rest/api/3/issue/SP-339/attachments" method="POST" resourcePath="/rest/api/3/issue/SP-339/attachments" id="6ed7847c-ab44-4513-b264-90f9ac0a7426" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6ed7847c-ab44-4513-b264-90f9ac0a7426fileName">%2Frest%2Fapi%2F3%2Fissue%2FSP-339%2Fattachments</con:setting>
+  </con:settings>
+  <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+  <con:dispatchConfig/>
+  <con:dispatchXPath/>
+  <con:routeScript/>
+  <con:response name="Response 1" id="78c605fd-b63b-4bd2-a427-ac282ab37744" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" dataSource="">
+    <con:settings/>
+    <con:responseContent/>
+  </con:response>
+</con:restMockAction>

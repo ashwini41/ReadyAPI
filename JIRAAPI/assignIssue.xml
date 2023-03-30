@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4bd91735-dca9-4c19-9ee1-3344e926b6d6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="assignIssue" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [Issue] located at [/rest/api/2/issue]</con:description>
+  <con:settings>
+    <con:setting id="4bd91735-dca9-4c19-9ee1-3344e926b6d6fileName">assignIssue</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="assignIssue" id="b98b9374-c83d-4406-b508-b574521bc467">
+    <con:settings/>
+    <con:config service="https://team-16705711447180.atlassian.net" resourcePath="/rest/api/2/issue" methodName="Issue" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="assignIssue" id="fd3471f8-41b6-4322-b121-c9a60e1b567a" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://team-16705711447180.atlassian.net</con:endpoint>
+        <con:request>{
+   "fields" : {
+      "project" : {
+         "id" : "10000"
+      },
+      "assignee" : {
+         "id" : "${#[JIRAAPI#getEmailbyID#Common property]#accountID}"
+      },
+      "summary" : "Rest API New Issue",
+      "description" : "This is a new TASK created using Rest API",
+      "issuetype" : {
+         "name" : "Task"
+      }
+   }
+}</con:request>
+        <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/issue</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f7a00cc2-1b20-4f8e-84c2-e0b9b95eed48" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Authorization" value="${#Project#Authorization}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="acfcbf46-6328-4153-894e-c675de655398">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>key</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>assignIssue</con:sourceStep>
+        <con:sourcePath>$['key']</con:sourcePath>
+        <con:targetType>issueID</con:targetType>
+        <con:targetStep>CommonProperty</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="3931d6a8-e144-42a4-9310-88e68fbaba25">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="issueID" id="264193b0-942a-4592-aaca-7a6a1e7e8e55">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="CommonProperty" id="a300219e-0ad0-45f7-bd17-a9454d4b5acd">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>issueID</con:name>
+          <con:value>SP-339</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

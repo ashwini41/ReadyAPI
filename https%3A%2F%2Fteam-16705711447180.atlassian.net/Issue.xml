@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Issue" path="/rest/api/2/issue" id="643b8789-f194-4cc7-aa76-30f2e32f2b7b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="643b8789-f194-4cc7-aa76-30f2e32f2b7bfileName">Issue</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Issue" id="aba0edbd-6865-41c2-a8be-eac27ce9fe6d" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc=</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+      <con:status>401 400</con:status>
+      <con:params/>
+      <con:element xmlns:iss="https://team-16705711447180.atlassian.net/rest/api/2/issue">iss:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element xmlns:iss="https://team-16705711447180.atlassian.net/rest/api/2/issue">iss:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json;charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="assignIssue" id="fd3471f8-41b6-4322-b121-c9a60e1b567a" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://localhost:8089/</con:endpoint>
+      <con:request>{
+  "fields": {
+    "project": {
+      "id": "10000"
+    },
+    "assignee": {
+    	 "id" : "5d1840a4dea8360d16bceb80"
+     
+    },
+    "summary": "Rest API New Issue",
+    "description": "This is a new TASK created using Rest API",
+    "issuetype": {
+      "name": "Task"
+    }
+  }
+}</con:request>
+      <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/issue</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Authorization" value="Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc="/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

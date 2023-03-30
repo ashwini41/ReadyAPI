@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="447d5cf8-db21-4fac-a4c3-dfc66b5c9428" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="getEmailbyID" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [Search] located at [/rest/api/2/user/search]</con:description>
+  <con:settings>
+    <con:setting id="447d5cf8-db21-4fac-a4c3-dfc66b5c9428fileName">getEmailbyID</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="GetIDbyEmail" id="c7d2d878-364a-4a0e-b7e2-66854a7c2096">
+    <con:settings/>
+    <con:config service="https://team-16705711447180.atlassian.net" resourcePath="/rest/api/2/user/search" methodName="Search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="GetIDbyEmail" id="fe9fc542-543d-43fc-ba00-47762088e281" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://team-16705711447180.atlassian.net</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/2/user/search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c80f8264-ddcc-468c-86f3-0b2efd94e4d2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="a50c3314-5858-4cc8-82e4-38a3130230ca">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" transferToAll="false" ignoreEmpty="false" transferChildNodes="false">
+        <con:name>accountId</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>GetIDbyEmail</con:sourceStep>
+        <con:sourcePath>$[0]['accountId']</con:sourcePath>
+        <con:targetType>accountID</con:targetType>
+        <con:targetStep>Common property</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="properties" name="Common property" id="b6e2a3bb-3da6-429c-a423-f15f5515484b">
+    <con:settings/>
+    <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties>
+        <con:property>
+          <con:name>accountID</con:name>
+          <con:value>5b2789ce02cfea1ba6411b66</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasink" name="Data Sink" id="d6eeedd3-f775-4866-9365-0c5146effff0">
+    <con:settings/>
+    <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSink type="Groovy">
+        <con:configuration>
+          <script/>
+        </con:configuration>
+      </con:dataSink>
+      <con:properties/>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

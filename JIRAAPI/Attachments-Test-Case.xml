@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="fd0ea346-bf06-43af-969d-0eb2fbcf65f2" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="Attachments Test Case" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>The test case generated for the REST resource [Attachments] located at [/rest/api/3/issue/SP-30/attachments]</con:description>
+  <con:settings>
+    <con:setting id="fd0ea346-bf06-43af-969d-0eb2fbcf65f2fileName">Attachments-Test-Case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="addAttachment" id="48da15b6-c60c-4ddc-84f4-e08ef0ff90ac">
+    <con:settings/>
+    <con:config service="https://team-16705711447180.atlassian.net" resourcePath="/rest/api/3/issue/${#[JIRAAPI#assignIssue#CommonProperty]#issueID}/attachments" methodName="Attachments" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="addAttachment" id="368b1c73-0c28-4886-833d-84d4be6bdc57" mediaType="multipart/form-data" postQueryString="true">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://team-16705711447180.atlassian.net</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://team-16705711447180.atlassian.net/rest/api/3/issue/SP-30/attachments</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:attachment>
+          <con:name>readyapi_project_report.pdf</con:name>
+          <con:contentType>application/pdf</con:contentType>
+          <con:contentId>readyapi_project_report.pdf</con:contentId>
+          <con:url>${reportPath}</con:url>
+          <con:id>18d22b08-c9ea-4c13-bb0a-e5c9c70d989c</con:id>
+        </con:attachment>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Authorization" value="Basic cmFqZXNoLnllbXVsQGdtYWlsLmNvbTpSakRrN3hxcXVqOGhhazhkZHZQVTk4Nzc="/>
+          <con:entry key="file" value="file:${attachment}"/>
+          <con:entry key="X-Atlassian-Token" value="no-check"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+          <con:entry>X-Atlassian-Token</con:entry>
+          <con:entry>file</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
